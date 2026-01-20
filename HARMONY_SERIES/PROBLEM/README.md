@@ -1,2 +1,2 @@
-https://cses.fi/alon/task/1713/
+[1] https://cses.fi/alon/task/1713/
 
