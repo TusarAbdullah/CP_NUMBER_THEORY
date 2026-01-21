@@ -1,0 +1,72 @@
+#include<bits/stdc++.h>
+using namespace std;
+#define tusar() ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
+#define ll long long
+
+const int mx = 1e7+123;
+bool isPrime[mx];
+vector<int> primes;
+
+
+void primeGen(int n)
+{
+    for(int i=2; i<=n; i++)isPrime[i] = 1;
+
+    for(int i=2; i<=n; i++)
+        {
+            for(int j=i+i; j<=n; j+=i)
+                {
+                    isPrime[j] = 0;
+                }
+        }
+
+    for(int i=2; i<=n; i++)
+        {
+            if(isPrime[i] == 1)
+                {
+                    primes.push_back(i);
+                }
+        }
+
+}
+
+
+
+int main()
+{
+    tusar();
+
+    int lim = 20;
+    primeGen(lim);
+
+    for(int i=0; i<primes.size(); i++)
+        {
+            cout<<primes[i]<<endl;
+        }
+
+
+    return 0;
+}
+
+
+
+
+/***************************************
+****************************************
+****************************************
+
+2
+3
+5
+7
+11
+13
+17
+19
+
+
+
+Time Complexity = O(n ln n)
+
+*/
+
