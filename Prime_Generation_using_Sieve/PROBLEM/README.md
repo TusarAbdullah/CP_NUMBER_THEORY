@@ -1,5 +1,5 @@
 
-while ( cin >> n ) {}       -->     end of file porjonto input nite bolle <br>
+**while ( cin >> n ) {}       -->     end of file porjonto input nite bolle** <br>
 
 
 
